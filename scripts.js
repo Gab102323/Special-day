@@ -23,4 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
             confetti.remove();
         }, 5000);
     }
+    document.addEventListener('DOMContentLoaded', function() {
+        const surveyForm = document.getElementById('surveyForm');
+        const gifContainer = document.getElementById('gifContainer');
+    
+        surveyForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+    
+            // Show the GIF image
+            const gifImage = document.createElement('img');
+            gifImage.src = 'https://i.pinimg.com/originals/fd/6c/07/fd6c079e840fb1fe34e91856bb5d2b0d.gif'; // Replace with your GIF URL
+            gifImage.alt = 'Cat Kiss GIF';
+    
+            // Clear existing content and show the GIF image
+            gifContainer.innerHTML = '';
+            gifContainer.appendChild(gifImage);
+        });
+    });
 });
